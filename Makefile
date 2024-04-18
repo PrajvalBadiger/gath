@@ -7,7 +7,8 @@ run: build
 	@./tmp/$TARGET
 
 watch:
-	templ generate --watch --proxy="http://localhost:8080" --cmd="go run ."
+	npx tailwindcss -m -i ./css/input.css -o ./css/output.css --watch & \
+		templ generate --watch --proxy="http://localhost:8080" --cmd="go run ."
 
 tailwind-watch:
 	npx tailwindcss -m -i ./css/input.css -o ./css/output.css --watch
