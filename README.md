@@ -6,6 +6,8 @@ Template for Go htmx fullstack.
 
 - [Go](https://go.dev/doc/install)
 - [TailwindCSS](https://tailwindcss.com/docs/installation) - install tailwindcss cli globally `bun install -g tailwindcss@latest` (can be installed using npm also).
+- [Air](https://github.com/cosmtrek/air) - `curl -sSfL https://raw.githubusercontent.com/cosmtrek/air/master/install.sh | sh -s`
+- [browser-sync](https://browsersync.io/#install) - `bun install -g browser-sync`
 
 ## Installation
 
@@ -28,13 +30,21 @@ Note: At this point of time you can change the go module name and also delete th
 
 ## Run
 
-Once all the dependencies are resolved, you can run the app. Supports live reloading.
+Once all the dependencies are resolved, you can run the app.
 ``` bash
-make watch
+make run
 ```
 
+## Live reloading
+Using Air for live reloading on file changes and browser-sync for auto refreshing the browser.
+
+Run the below commands in seperate terminal windows
+1. TailwindCSS         : `make tailwind-watch`
+2. Air and browser-sync: `make bw-sync`
+
+
 # TODO
-- [ ] Add air for live reloading
+- [X] Add air for live reloading
 - [ ] Add a database - mariaDB
 - [ ] Add support for environment variables
 

@@ -3,3 +3,4 @@ tmp/
 *_templ.txt
 node_modules/
 bun.lockb
+bin/
